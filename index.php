@@ -16,6 +16,7 @@ $rs = $conn->query("SELECT * FROM tasks");
 				<th>Edit</th>
 				<th>ID</th>
 				<th>Name</th>
+				<th>Name Length</th>
 				<th>Assigned</th>
 			</tr>
 			<?php while ($obj = $rs->fetch_object()) { ?>
@@ -23,6 +24,7 @@ $rs = $conn->query("SELECT * FROM tasks");
 					<td><a href="edit.php?id=<?php echo $obj->id ?>">Edit</a></td>
 					<td><?php echo $obj->id ?></td>
 					<td><?php echo $obj->task_name ?></td>
+					<td><?php echo strlen($obj->task_name) ?></td>
 					<td><?php echo $obj->assigned_to ?></td>
 				</tr>
 			<?php } ?>
