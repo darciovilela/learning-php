@@ -1,0 +1,15 @@
+body, table, input {
+	font-size: 20px;
+}
+
+div.box {
+	background: gray;
+	padding: 10px;
+}
+div.box h2 {
+	color: red;
+}
+
+input[type='text'] {
+	width: 400px;
+}
